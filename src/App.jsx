@@ -3,20 +3,28 @@ import "./App.css";
 
 function App() {
   const [count, setCount] = useState(0);
-  if (count > 10 ) {
-    
-    setCount ("Счётчик не может быть больше 10!" )
-  } else if (count < 0 ){
-     setCount ("Счётчик не может быть меньше 0!" )
+  const [message, setMessage] = useState(0);
+
+ function handleClickUp() {
+  
+  if (count > 10 ){
+    setCount (count = 0)
   }
+  console.log(useState)
+  
+ }
+
+ function handleClickDown () {
+  
+ }
 
   return (
     <>
       <div>
         <p>Счётчик: {count}</p>
-        <button onClick={() => setCount(count + 1)}>Увеличить</button>
+        <button onClick={handleClickUp}>Увеличить</button>
 
-        <button onClick={() => setCount(count - 1)}>Уменьшить</button>
+        <button onClick={handleClickDown}>Уменьшить</button>
       </div>
     </>
   );
